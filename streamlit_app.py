@@ -20,9 +20,9 @@ my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT
 
 pd_df = my_dataframe.to_pandas()
 ingredients_list = st.multiselect(
-    'Choose up to 6 ingredients:',
+    'Choose up to 5 ingredients:',
     my_dataframe,
-    max_selections = 6
+    max_selections = 5
 )
 if ingredients_list:
     ingredients_string = ' '.join(ingredients_list)  # Corrigido para juntar os ingredientes com vírgula
