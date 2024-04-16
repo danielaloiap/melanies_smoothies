@@ -13,8 +13,8 @@ name_on_order = st.text_input('Name on Smoothie:')
 st.write('The name on your Smoothie will be:', name_on_order)
 
 conn = connect(
-    account = "DDXLLFY-AT93454"
-    user = "danielplastina"
+account = "DDXLLFY-AT93454"
+user = "danielplastina"
 password = "135Mudar@135Alterar"
 role = "SYSADMIN"
 warehouse = "COMPUTE_WH"
