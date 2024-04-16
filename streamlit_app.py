@@ -37,6 +37,10 @@ if ingredients_list:
         fv_df = st.dataframe(data=fruityvice_response.json(), use_container_width = True)
     time_to_insert = st.button('Submit Order')
     if time_to_insert:
+        # Construa a instrução SQL de inserção
+        my_insert_stmt = f"INSERT INTO smoothies.public.orders (name_on_order, ingredients) VALUES ('{name_on_order}', '{ingredients_string}')"
+        #Execute a instrução SQL
         session.sql(my_insert_stmt).collect()
+
         st.success('Your Smoothie is ordered!', icon="✅")
    
